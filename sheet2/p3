@@ -1,0 +1,15 @@
+#! /bin/bash
+
+read -p 'Enter your gross salary: ' gs
+
+if [ $gs -gt 2000 ]
+then
+	echo "Your net salary after tax reduction: " 
+	echo "$gs-($gs*.15)" | bc
+elif [ $gs -ge 1000 ] && [ $gs -lt 2000 ]
+then
+	echo "Your net salary after tax reduction: "
+	echo " $gs-($gs*.1)" | bc 
+else
+	echo "NO Tax"
+fi
