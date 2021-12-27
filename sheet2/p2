@@ -1,0 +1,6 @@
+#! /bin/bash
+
+read -p 'temperature in degrees Celsius: ' c
+
+echo "temperature in degrees Fahrenheit: " 
+echo "scale=4;($c*9/5)+32" | bc
