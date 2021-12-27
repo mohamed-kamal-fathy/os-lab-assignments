@@ -1,0 +1,11 @@
+#! /bin/bash
+
+read -p 'Enter Number: ' n
+read -p 'Enter power: ' p
+
+while [ $p -lt 0 ]
+do
+	read -p 'Enter power: ' p
+done
+
+echo "scale=2; $n^$p" | bc -l
